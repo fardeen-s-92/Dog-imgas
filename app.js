@@ -5,6 +5,14 @@ btn.addEventListener("click", async () => {
   image.setAttribute("src", link);
 });
 
+btn.addEventListener("keydown", async (e) => {
+  if (e == "Enter") {
+    let link = await getImg();
+    let image = document.getElementById("image");
+    image.setAttribute("src", link);
+  }
+});
+
 let url2 = "https://dog.ceo/api/breeds/image/random";
 
 async function getImg() {
